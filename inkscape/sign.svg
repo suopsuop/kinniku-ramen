@@ -24,8 +24,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="5.8511223"
-     inkscape:cx="253.79746"
-     inkscape:cy="446.15372"
+     inkscape:cx="227.47773"
+     inkscape:cy="432.48113"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="3832"
@@ -40,6 +40,12 @@
        width="203.7216"
        height="121.68606"
        id="rect1" />
+    <rect
+       x="206.45612"
+       y="417.01401"
+       width="203.7216"
+       height="121.68606"
+       id="rect2" />
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -49,7 +55,7 @@
        xml:space="preserve"
        transform="scale(0.26458333)"
        id="text1"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'A-OTF Midashi Go MB31 Pr5';-inkscape-font-specification:'A-OTF Midashi Go MB31 Pr5';white-space:pre;shape-inside:url(#rect1);fill:#000000"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'A-OTF Midashi Go MB31 Pr5';-inkscape-font-specification:'A-OTF Midashi Go MB31 Pr5';white-space:pre;shape-inside:url(#rect1);display:inline;fill:#000000"
        inkscape:export-filename="text1.svg"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96"><tspan

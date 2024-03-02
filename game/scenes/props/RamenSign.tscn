@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://drtqpbd8eiqr7"]
+
+[ext_resource type="PackedScene" path="res://assets/models/sign.glb" id="1_ey3n1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_as376"]
+size = Vector3(1.45801, 1.03809, 0.0702515)
+
+[node name="RamenSign" type="Node3D"]
+
+[node name="sign2" parent="." instance=ExtResource("1_ey3n1")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0196228)
+shape = SubResource("BoxShape3D_as376")

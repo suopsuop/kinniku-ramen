@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bx2j6mpfx1s4i"]
+
+[ext_resource type="Texture2D" uid="uid://dn4chrlaspnf6" path="res://assets/models/sign_sign.png" id="1_mkfjb"]
+
+[resource]
+resource_name = "sign"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_mkfjb")
+roughness = 0.5
+emission_enabled = true
+emission_texture = ExtResource("1_mkfjb")
+texture_filter = 2
+texture_repeat = false
