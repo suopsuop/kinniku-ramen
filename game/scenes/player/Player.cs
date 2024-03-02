@@ -10,7 +10,7 @@ public partial class Player : CharacterBody3D
     [Export]
     public Camera3D playerCamera;
     [Export]
-    public Control playerHUD {  get; set; }
+    public Control playerHUD;
 
     // Get the gravity from the project settings to be synced with RigidBody nodes.
     private float GRAVITY = ProjectSettings.GetSetting("physics/3d/default_gravity").AsSingle();
@@ -80,7 +80,8 @@ public partial class Player : CharacterBody3D
         {
             InputEventMouseMotion mouseMotion = (@event as InputEventMouseMotion);
 
-            RotateY(-mouseMotion.Relative.X * mouseSensitivity / 10f);
+            RotateY(-mouseMotion.Relative.X * mouseSensitivity / 15f);
+
             playerCamera.RotateX(-mouseMotion.Relative.Y * mouseSensitivity / 10f);
 
             playerCamera.Rotation = new Vector3(Mathf.Clamp(playerCamera.Rotation.X, Mathf.DegToRad(-89f), Mathf.DegToRad(89f)), playerCamera.Rotation.Y, playerCamera.Rotation.Z);

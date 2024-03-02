@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqij2emeh4ecx"]
+[gd_scene load_steps=5 format=3 uid="uid://bqij2emeh4ecx"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e4dni"]
-sky_top_color = Color(0.160784, 0.254902, 0.278431, 1)
-sky_horizon_color = Color(0.462745, 0.470588, 0.486275, 1)
-ground_bottom_color = Color(0.0470588, 0.0352941, 0.0235294, 1)
-ground_horizon_color = Color(0.427451, 0.435294, 0.45098, 1)
+[ext_resource type="Texture2D" uid="uid://buafede31uti4" path="res://assets/textures/hdri/city.png" id="1_oljdi"]
 
-[sub_resource type="Sky" id="Sky_k0je0"]
-sky_material = SubResource("ProceduralSkyMaterial_e4dni")
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_cq5e5"]
+panorama = ExtResource("1_oljdi")
+filter = false
+
+[sub_resource type="Sky" id="Sky_o0sjt"]
+sky_material = SubResource("PanoramaSkyMaterial_cq5e5")
 
 [sub_resource type="Environment" id="Environment_pdyen"]
 background_mode = 2
-sky = SubResource("Sky_k0je0")
+sky = SubResource("Sky_o0sjt")
 tonemap_mode = 3
 ssr_enabled = true
 ssao_enabled = true
@@ -20,7 +20,8 @@ sdfgi_enabled = true
 sdfgi_use_occlusion = true
 glow_enabled = true
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.008
+volumetric_fog_density = 0.009
+volumetric_fog_albedo = Color(0.176471, 0.176471, 0.176471, 1)
 
 [node name="RamenEnvironment" type="WorldEnvironment"]
 environment = SubResource("Environment_pdyen")

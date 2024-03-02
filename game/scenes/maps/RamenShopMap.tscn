@@ -114,32 +114,36 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 0.218406, 2.52722)
 [node name="WorldEnvironment" parent="." instance=ExtResource("2_4l5j8")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.169399, 0.30421, -0.937422, 0.911416, 0.313564, 0.266457, 0.375, -0.899519, -0.224144, 0, 1.25, 2.5)
+transform = Transform3D(0.506414, 0.401299, -0.76322, 0.776479, 0.172698, 0.606016, 0.375, -0.899519, -0.224144, 0, 1.25, 2.5)
+light_color = Color(0.533333, 0.705882, 0.729412, 1)
+light_energy = 0.1
+light_indirect_energy = 1.2
+shadow_enabled = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.75, 3.75, -2.75)
-light_color = Color(1, 0.980392, 0.909804, 1)
+light_color = Color(1, 0.835294, 0.392157, 1)
 shadow_enabled = true
 spot_range = 10.0
 spot_angle = 22.0
 
 [node name="SpotLight3D2" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 2.75, 3.75, -2.75)
-light_color = Color(1, 0.980392, 0.909804, 1)
+light_color = Color(1, 0.835294, 0.392157, 1)
 shadow_enabled = true
 spot_range = 10.0
 spot_angle = 22.0
 
 [node name="SpotLight3D3" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 4.75, 3.75, -2.75)
-light_color = Color(1, 0.980392, 0.909804, 1)
+light_color = Color(1, 0.835294, 0.392157, 1)
 shadow_enabled = true
 spot_range = 10.0
 spot_angle = 22.0
 
 [node name="SpotLight3D4" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 6.75, 3.75, -2.75)
-light_color = Color(1, 0.980392, 0.909804, 1)
+light_color = Color(1, 0.835294, 0.392157, 1)
 shadow_enabled = true
 spot_range = 10.0
 spot_angle = 22.0
