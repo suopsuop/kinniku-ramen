@@ -22,8 +22,10 @@ scene where protag looking through train window, goes through tunnel, see their 
 
 target dossiers are printed as your receipt for the ramen you purchased. 
 
-person sitting near you along the ramen bar will every now and then look at you, and when you look at/near him he goes back to his ramen. he's eventually the person that attacks you on the train. this'd be easily achievable with a spherical volume around the dude and a raycast from the player. 
+person sitting near you along the ramen bar will every now and then look at you, and when you look at/near him he goes back to his ramen. he's eventually the person that attacks you on the train. this'd be easily achievable with a spherical volume around the dude and a raycast from the player. he looks like your average balding salaryman, and is named shin
 
 each mission you get friendlier with the ramen bar owner, and in the final mission she tells you to take care of yourself as you leave.
 
 on one of the dossiers she could also write her phone number and a little doodle of her face (super simplified)
+
+maybe bar owner called akane, red themed restaurant?
