@@ -1,7 +1,9 @@
 King's Court
 
 Aberration: a departure from what is normal, usual, or expected, typically one that is unwelcome. 
+
 1. 
+
 You play as a spirit for hire that is possessing the crown jester, but your king's kingdom has recently been bombarded with various spirits that have been tasked with discretely killing the king, by possessing the king's regular visitors. you must play simple minigames while sussing out the visitors of the court, and stopping them before they can kill the king.
 
 start out with the king talking to you through a spirit medium, he tells you there are evil spirits trying to kill him and he wants to hire you to stop them. he says to possess his jester so as not to spook his guests.
@@ -9,3 +11,7 @@ start out with the king talking to you through a spirit medium, he tells you the
 you play the game by completing a series of events, laid out on the calender. e.g. farmer's plea, dinner with the french, etc. you have to guess who is a normal person and who is possessed, and act accordingly.
 
 2.
+
+You play as a hired gun that is tasked to commit multiple murders, and after each mission you go to a bar to be tasked with your next mission, as well as to chat to your employer, who you slowly learn more about.
+
+as the missions go on your targets become more and more like innocent civilians that are being killed to hurt others connected to them, which you can discuss with your employer, who's just a middleman. by the end, you can either escape together or complete the final mission. 
