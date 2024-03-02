@@ -25,10 +25,3 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_bfkoe")
 stretch_mode = 3
-
-[node name="ColorRect2" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 487.0
-offset_top = 268.0
-offset_right = 807.0
-offset_bottom = 479.0
