@@ -10,10 +10,33 @@ config_version=5
 
 [application]
 
-config/name="KingsCourt"
+config/name="KinnikuRamen"
 config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=480
+window/size/mode=2
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
 
 [dotnet]
 
-project/assembly_name="KingsCourt"
+project/assembly_name="KinnikuRamen"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=3
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=3
+global_illumination/voxel_gi/quality=1
+camera/depth_of_field/depth_of_field_bokeh_quality=2
+camera/depth_of_field/depth_of_field_use_jitter=true
+textures/decals/filter=2
+textures/light_projectors/filter=2
+environment/screen_space_reflection/roughness_quality=0
+occlusion_culling/use_occlusion_culling=true
