@@ -14,8 +14,16 @@ you play the game by completing a series of events, laid out on the calender. e.
 
 You play as a hired gun that is tasked to commit multiple murders, and after each mission you go to a bar to be tasked with your next mission, as well as to chat to your employer, who you slowly learn more about.
 
-as the missions go on your targets become more and more like innocent civilians that are being killed to hurt others connected to them, which you can discuss with your employer, who's just a middleman. by the end, you can either escape together or complete the final mission. 
+as the missions go on your targets become more and more like innocent civilians that are being killed to hurt others connected to them, which you can discuss with your employer, who's just a middleman. by the end, you escape together. 
 
 second last mission involves you going to stealthily kill someone, only for someone else to walk in as you're about to do it and you realise your target is innocent, and is meant to hurt the person that just walked in (that has pissed off the gang somehow). 
 
-scene where protag looking through train window, goes through tunnel, see their face and perhaps an enemy behind them. 
+scene where protag looking through train window, goes through tunnel, see their face and perhaps an enemy behind them. when you defeat the enemy, before you kill him, he tells you that the ramen bar owner has already been taken care of (which is what you've been doing this entire time, to others).
+
+target dossiers are printed as your receipt for the ramen you purchased. 
+
+person sitting near you along the ramen bar will every now and then look at you, and when you look at/near him he goes back to his ramen. he's eventually the person that attacks you on the train. this'd be easily achievable with a spherical volume around the dude and a raycast from the player. 
+
+each mission you get friendlier with the ramen bar owner, and in the final mission she tells you to take care of yourself as you leave.
+
+on one of the dossiers she could also write her phone number and a little doodle of her face (super simplified)
