@@ -1,29 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbsctde4ydmsu"]
+[gd_scene load_steps=8 format=3 uid="uid://bbsctde4ydmsu"]
 
 [ext_resource type="Material" uid="uid://6nje4i2o7ybo" path="res://!TESTING/shiny.tres" id="1_lg12x"]
 [ext_resource type="Texture2D" uid="uid://hdl2kojxp8nc" path="res://!TESTING/enemybody.png" id="1_pxn22"]
+[ext_resource type="PackedScene" uid="uid://bqij2emeh4ecx" path="res://misc/world_environments/ramen_environment.tscn" id="2_jom0q"]
 [ext_resource type="Material" uid="uid://b4cvs1i3v38gs" path="res://!TESTING/red.tres" id="3_cbnqt"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e4dni"]
-sky_top_color = Color(0.160784, 0.254902, 0.278431, 1)
-sky_horizon_color = Color(0.462745, 0.470588, 0.486275, 1)
-ground_bottom_color = Color(0.0470588, 0.0352941, 0.0235294, 1)
-ground_horizon_color = Color(0.427451, 0.435294, 0.45098, 1)
-
-[sub_resource type="Sky" id="Sky_k0je0"]
-sky_material = SubResource("ProceduralSkyMaterial_e4dni")
-
-[sub_resource type="Environment" id="Environment_pdyen"]
-background_mode = 2
-sky = SubResource("Sky_k0je0")
-tonemap_mode = 3
-ssr_enabled = true
-ssao_enabled = true
-ssil_enabled = true
-sdfgi_enabled = true
-glow_enabled = true
-volumetric_fog_enabled = true
-volumetric_fog_density = 0.008
+[ext_resource type="PackedScene" uid="uid://cc35bqpkbuvsr" path="res://scenes/player/Player.tscn" id="4_yq4yo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uw7wa"]
 animations = [{
@@ -84,8 +65,7 @@ size = Vector3(1.75, 2.5, 0.25)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.875, -2.625)
 size = Vector3(6.5, 4.25, 0.25)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_pdyen")
+[node name="WorldEnvironment" parent="." instance=ExtResource("2_jom0q")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.397564, 0.458787, -0.794643, 0, 0.866025, 0.5, 0.917574, 0.198782, -0.344301, 0, 2.01862, 0)
@@ -96,9 +76,6 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 1)
 light_color = Color(1, 0.968627, 0.858824, 1)
 shadow_enabled = true
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 2.00405, 1.24619, 2.99911)
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, -1.21772)
@@ -124,3 +101,6 @@ size = Vector3(6.5, 4.25, 5.5)
 box_projection = true
 interior = true
 enable_shadows = true
+
+[node name="Player" parent="." instance=ExtResource("4_yq4yo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27918, 0.363409, 1.98056)
