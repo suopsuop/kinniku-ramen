@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b3xorwievm6pp"]
+
+[ext_resource type="Texture2D" uid="uid://dmnff5002os02" path="res://!TESTING/arms_hud_cz75tex2.png" id="1_njr4u"]
+
+[resource]
+resource_name = "cz75.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_njr4u")
+metallic = 0.95
+roughness = 0.745
+texture_filter = 2

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bgm7fmdkb7xr5"]
+
+[ext_resource type="Texture2D" uid="uid://dpem253wpujgt" path="res://!TESTING/arms_hud_arms.png" id="1_hxmdb"]
+
+[resource]
+resource_name = "Arms"
+cull_mode = 2
+albedo_texture = ExtResource("1_hxmdb")
+roughness = 0.65
