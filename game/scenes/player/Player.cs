@@ -10,6 +10,9 @@ public partial class Player : CharacterBody3D
     [Export]
     public Camera3D playerCamera;
     [Export]
+    public Camera3D gunmodelCamera;
+
+    [Export]
     public Control playerHUD;
 
     // Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -34,6 +37,9 @@ public partial class Player : CharacterBody3D
 
     const float TARGET_WALK_FOV = 63f;
     const float TARGET_SPRINT_FOV = 67f;
+
+    // Camera shake stuff
+
 
     [ExportGroup("Player control stuff")]
 
@@ -94,6 +100,9 @@ public partial class Player : CharacterBody3D
     public override void _Process(double delta)
     {
         base._Process(delta);
+
+        gunmodelCamera.GlobalTransform = playerCamera.GlobalTransform;
+        gunmodelCamera.GlobalPosition += new Vector3(0, .1f, -.25f);
     }
 
     public override void _PhysicsProcess(double delta)
