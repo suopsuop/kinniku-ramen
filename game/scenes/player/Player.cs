@@ -94,7 +94,7 @@ public partial class Player : CharacterBody3D
 
             playerCamera.RotateX(-mouseMotion.Relative.Y * mouseSensitivity / 10f);
 
-            playerCamera.Rotation = new Vector3(Mathf.Clamp(playerCamera.Rotation.X, Mathf.DegToRad(-89f), Mathf.DegToRad(89f)), playerCamera.Rotation.Y, playerCamera.Rotation.Z);
+            playerCamera.Rotation = new Vector3(Mathf.Clamp(playerCamera.Rotation.X, Mathf.DegToRad(-85f), Mathf.DegToRad(85f)), playerCamera.Rotation.Y, playerCamera.Rotation.Z);
 
         }
 

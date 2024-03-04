@@ -218,7 +218,6 @@ _data = {
 animation = &"Basepose"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_lwwav"]
-graph_offset = Vector2(-238, 54)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_m5lth")
 nodes/Animation/position = Vector2(80, 120)
 node_connections = [&"output", 0, &"Animation"]
@@ -572,10 +571,7 @@ tree_root = SubResource("AnimationNodeBlendTree_lwwav")
 anim_player = NodePath("../AnimationPlayer")
 
 [node name="Arms" type="SubViewportContainer" parent="Camera3D"]
-clip_children = 2
-light_mask = 3
-visibility_layer = 3
-y_sort_enabled = true
+top_level = true
 material = SubResource("ShaderMaterial_m7ge8")
 anchors_preset = 15
 anchor_right = 1.0
