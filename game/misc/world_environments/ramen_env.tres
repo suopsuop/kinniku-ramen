@@ -1,0 +1,24 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://bhtub1a6jw1jl"]
+
+[ext_resource type="Texture2D" uid="uid://buafede31uti4" path="res://assets/textures/hdri/city.png" id="1_arjs2"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_cq5e5"]
+panorama = ExtResource("1_arjs2")
+filter = false
+
+[sub_resource type="Sky" id="Sky_o0sjt"]
+sky_material = SubResource("PanoramaSkyMaterial_cq5e5")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_o0sjt")
+tonemap_mode = 3
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.009
+volumetric_fog_albedo = Color(0.176471, 0.176471, 0.176471, 1)

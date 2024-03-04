@@ -109,9 +109,6 @@ use_collision = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.125, 2.25)
 size = Vector3(12, 0.25, 5.5)
 
-[node name="Player" parent="." instance=ExtResource("1_buvr4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 0.218406, 2.52722)
-
 [node name="WorldEnvironment" parent="." instance=ExtResource("2_4l5j8")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -172,3 +169,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.86764, 3.74213, -3.34737)
 light_color = Color(0.929412, 0.894118, 0.713726, 1)
 light_energy = 0.45
 shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("1_buvr4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 3)
+slide_on_ceiling = false

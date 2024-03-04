@@ -12,6 +12,10 @@ public partial class Player : CharacterBody3D
     [Export]
     public Camera3D gunmodelCamera;
 
+    //DEBUGDEBUGDEBUG
+    //[Export]
+    //public Node3D gunmodel;
+
     [Export]
     public Control playerHUD;
 
@@ -99,10 +103,10 @@ public partial class Player : CharacterBody3D
 
     public override void _Process(double delta)
     {
-        base._Process(delta);
-
         gunmodelCamera.GlobalTransform = playerCamera.GlobalTransform;
-        gunmodelCamera.GlobalPosition += new Vector3(0, .1f, -.25f);
+        //gunmodelCamera.GlobalPosition += new Vector3(0, .1f, -.25f);
+
+        base._Process(delta);
     }
 
     public override void _PhysicsProcess(double delta)
@@ -150,6 +154,11 @@ public partial class Player : CharacterBody3D
         Velocity = velocity;
 
         MoveAndSlide();
+
+        //GD.Print(playerCamera.GlobalPosition + "- playerCamera");
+        //GD.Print(gunmodelCamera.GlobalPosition + "- gunmodelCamera");
+        //GD.Print(gunmodel.GlobalPosition + "- gunmodel");
+
     }
 
     public void HandleJumping()
@@ -179,7 +188,7 @@ public partial class Player : CharacterBody3D
         if (Input.IsActionPressed("ui_right"))
             strafeDir += basis.X;
 
-        if(strafeDir ==  Vector3.Zero)
+        if(strafeDir == Vector3.Zero)
             isStrafing = false;
         else
             isStrafing = true;
