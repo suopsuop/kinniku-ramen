@@ -293,6 +293,7 @@ bones/4/scale = Vector3(1, 1, 1)
 
 [node name="cz75" type="MeshInstance3D" parent="Camera3D/arms_hud/GunRig/Skeleton3D"]
 layers = 2
+cast_shadow = 0
 mesh = SubResource("ArrayMesh_wfbws")
 skin = SubResource("Skin_pl6eq")
 
@@ -555,6 +556,7 @@ bones/35/scale = Vector3(1, 1, 1)
 
 [node name="Arms" type="MeshInstance3D" parent="Camera3D/arms_hud/ArmArmature/Skeleton3D"]
 layers = 2
+cast_shadow = 0
 mesh = SubResource("ArrayMesh_0r1du")
 skin = SubResource("Skin_aac3o")
 
@@ -591,7 +593,7 @@ render_target_clear_mode = 1
 render_target_update_mode = 4
 
 [node name="GunCam" type="Camera3D" parent="Camera3D/Arms/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 cull_mask = 1047554
 fov = 33.0
 

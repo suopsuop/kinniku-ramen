@@ -104,7 +104,9 @@ public partial class Player : CharacterBody3D
     public override void _Process(double delta)
     {
         gunmodelCamera.GlobalTransform = playerCamera.GlobalTransform;
-        //gunmodelCamera.GlobalPosition += new Vector3(0, .1f, -.25f);
+        //gunmodelCamera.Transform = playerCamera.Transform;
+
+        gunmodelCamera.GlobalPosition += new Vector3(0, .1f, -.25f);
 
         base._Process(delta);
     }
