@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cc35bqpkbuvsr"]
+[gd_scene load_steps=25 format=3 uid="uid://cc35bqpkbuvsr"]
 
 [ext_resource type="Script" path="res://scenes/player/Player.cs" id="1_qdnhk"]
 [ext_resource type="PackedScene" uid="uid://b83v2ctmt3iu4" path="res://scenes/ui/hud/hud.tscn" id="2_n2wc1"]
@@ -12,6 +12,7 @@
 [ext_resource type="Animation" uid="uid://bp14qu1i63acq" path="res://assets/animations/arms/ReloadGun.res" id="10_g4fs1"]
 [ext_resource type="Animation" uid="uid://bmq64dsphlslr" path="res://assets/animations/arms/DrawArms.res" id="11_v3xxp"]
 [ext_resource type="Animation" uid="uid://bjel5po0ivw7a" path="res://assets/animations/arms/FireArms.res" id="12_qw8qs"]
+[ext_resource type="Script" path="res://scenes/player/ViewportUpdateStep.cs" id="13_gdipd"]
 [ext_resource type="Animation" uid="uid://bn57mwnw78ulc" path="res://assets/animations/arms/ReloadArms.res" id="13_rsvyd"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dqngk"]
@@ -222,16 +223,16 @@ nodes/Animation/node = SubResource("AnimationNodeAnimation_m5lth")
 nodes/Animation/position = Vector2(80, 120)
 node_connections = [&"output", 0, &"Animation"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_m7ge8"]
-shader = ExtResource("3_lrytw")
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_g26po"]
 size = Vector3(0.5, 0.467773, 0.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m7ge8"]
+shader = ExtResource("3_lrytw")
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("playerCamera", "gunmodelCamera", "playerHUD")]
 script = ExtResource("1_qdnhk")
 playerCamera = NodePath("Camera3D")
-gunmodelCamera = NodePath("Camera3D/Arms/SubViewport/GunCam")
+gunmodelCamera = NodePath("Arms/SubViewport/GunCam")
 playerHUD = NodePath("Hud")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -572,7 +573,15 @@ libraries = {
 tree_root = SubResource("AnimationNodeBlendTree_lwwav")
 anim_player = NodePath("../AnimationPlayer")
 
-[node name="Arms" type="SubViewportContainer" parent="Camera3D"]
+[node name="StepArea3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StepArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.266113, -0.25)
+shape = SubResource("BoxShape3D_g26po")
+
+[node name="Hud" parent="." instance=ExtResource("2_n2wc1")]
+
+[node name="Arms" type="SubViewportContainer" parent="."]
 top_level = true
 material = SubResource("ShaderMaterial_m7ge8")
 anchors_preset = 15
@@ -583,7 +592,7 @@ grow_vertical = 2
 stretch = true
 stretch_shrink = 2
 
-[node name="SubViewport" type="SubViewport" parent="Camera3D/Arms"]
+[node name="SubViewport" type="SubViewport" parent="Arms"]
 transparent_bg = true
 handle_input_locally = false
 use_hdr_2d = true
@@ -591,16 +600,9 @@ gui_disable_input = true
 size = Vector2i(427, 240)
 render_target_clear_mode = 1
 render_target_update_mode = 4
+script = ExtResource("13_gdipd")
 
-[node name="GunCam" type="Camera3D" parent="Camera3D/Arms/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+[node name="GunCam" type="Camera3D" parent="Arms/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.48526, -0.164899)
 cull_mask = 1047554
 fov = 33.0
-
-[node name="StepArea3D" type="Area3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StepArea3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.266113, -0.25)
-shape = SubResource("BoxShape3D_g26po")
-
-[node name="Hud" parent="." instance=ExtResource("2_n2wc1")]

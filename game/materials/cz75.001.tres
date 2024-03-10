@@ -6,5 +6,11 @@
 resource_name = "cz75.001"
 albedo_texture = ExtResource("1_p40re")
 metallic = 0.95
-roughness = 0.745
+metallic_specular = 0.08
+roughness = 0.61
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.15
+emission_operator = 1
+emission_texture = ExtResource("1_p40re")
 texture_filter = 2

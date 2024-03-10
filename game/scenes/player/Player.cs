@@ -50,6 +50,18 @@ public partial class Player : CharacterBody3D
     [Export]
     public float mouseSensitivity = .05f;
 
+    // general public
+    public static bool isPlayerAlive = true;
+
+    // gun stuff
+    private int remainingAmmo = 7;
+    private const int MAXAMMO = 7;
+    private bool isReloading = false;
+    private bool isFiring = false;
+
+
+    // private stuff
+
     private bool queueJump = false;
 
     private float currentSpeed;
