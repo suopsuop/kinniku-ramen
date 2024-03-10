@@ -33,7 +33,7 @@ _subresources={
 "animations": {
 "Basepose": {
 "save_to_file/enabled": true,
-"save_to_file/keep_custom_tracks": "",
+"save_to_file/keep_custom_tracks": true,
 "save_to_file/path": "res://assets/animations/arms/Basepose.res",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
@@ -1832,7 +1832,7 @@ _subresources={
 },
 "DrawArms": {
 "save_to_file/enabled": true,
-"save_to_file/keep_custom_tracks": "",
+"save_to_file/keep_custom_tracks": true,
 "save_to_file/path": "res://assets/animations/arms/DrawArms.res",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
@@ -3631,7 +3631,7 @@ _subresources={
 },
 "DrawGun": {
 "save_to_file/enabled": true,
-"save_to_file/keep_custom_tracks": "",
+"save_to_file/keep_custom_tracks": true,
 "save_to_file/path": "res://assets/animations/arms/DrawGun.res",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
@@ -5430,7 +5430,7 @@ _subresources={
 },
 "FireArms": {
 "save_to_file/enabled": true,
-"save_to_file/keep_custom_tracks": "",
+"save_to_file/keep_custom_tracks": true,
 "save_to_file/path": "res://assets/animations/arms/FireArms.res",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
@@ -7229,7 +7229,7 @@ _subresources={
 },
 "FireGun": {
 "save_to_file/enabled": true,
-"save_to_file/keep_custom_tracks": "",
+"save_to_file/keep_custom_tracks": true,
 "save_to_file/path": "res://assets/animations/arms/FireGun.res",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
@@ -9028,7 +9028,7 @@ _subresources={
 },
 "ReloadArms": {
 "save_to_file/enabled": true,
-"save_to_file/keep_custom_tracks": "",
+"save_to_file/keep_custom_tracks": true,
 "save_to_file/path": "res://assets/animations/arms/ReloadArms.res",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
@@ -10827,7 +10827,7 @@ _subresources={
 },
 "ReloadGun": {
 "save_to_file/enabled": true,
-"save_to_file/keep_custom_tracks": "",
+"save_to_file/keep_custom_tracks": true,
 "save_to_file/path": "res://assets/animations/arms/ReloadGun.res",
 "settings/loop_mode": 0,
 "slice_1/end_frame": 0,
@@ -12637,6 +12637,14 @@ _subresources={
 "cz75.001": {
 "use_external/enabled": true,
 "use_external/path": "res://materials/cz75.001.tres"
+}
+},
+"nodes": {
+"PATH:ArmArmature/Skeleton3D/Arms": {
+"mesh_instance/layers": 2
+},
+"PATH:GunRig/Skeleton3D/cz75": {
+"mesh_instance/layers": 2
 }
 }
 }

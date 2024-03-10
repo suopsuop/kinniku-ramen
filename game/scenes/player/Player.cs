@@ -11,10 +11,20 @@ public partial class Player : CharacterBody3D
     public Camera3D playerCamera;
     [Export]
     public Camera3D gunmodelCamera;
+    [Export]
+    public AnimationPlayer gunmodelAnimation;
+    [Export]
+    public AnimationPlayer gunmodelAnimation2;
 
-    //DEBUGDEBUGDEBUG
-    //[Export]
-    //public Node3D gunmodel;
+
+    [ExportGroup("Audio Sources")]
+    [Export]
+    public AudioStreamPlayer3D gunshotSound;
+    [Export]
+    public AudioStreamPlayer3D reloadSound;
+    [Export]
+    public AudioStreamPlayer3D footstepSound;
+
 
     [Export]
     public Control playerHUD;
@@ -88,7 +98,7 @@ public partial class Player : CharacterBody3D
 
     public override void _Ready()
     {
-        JUMP_IMPULSE = Mathf.Sqrt(3 * GRAVITY * .85f);
+        JUMP_IMPULSE = Mathf.Sqrt(1.5f * GRAVITY * .85f);
 
         isFocused = true;
         Input.MouseMode = Input.MouseModeEnum.Captured;
@@ -118,7 +128,48 @@ public partial class Player : CharacterBody3D
         gunmodelCamera.GlobalTransform = playerCamera.GlobalTransform;
         //gunmodelCamera.Transform = playerCamera.Transform;
 
-        gunmodelCamera.GlobalPosition += new Vector3(0, .1f, -.25f);
+        gunmodelCamera.GlobalPosition += new Vector3(0.01f, .1f, -0.01f);
+
+        // Toggles mouse capturing 
+        if (Input.IsActionJustPressed("ui_cancel"))
+        {
+            isFocused = !isFocused;
+
+            if (isFocused)
+                Input.MouseMode = Input.MouseModeEnum.Captured;
+            else
+                Input.MouseMode = Input.MouseModeEnum.Visible;
+        }
+
+        if (Input.IsActionJustPressed("reload"))
+        {
+            //isReloading = true;
+            gunmodelAnimation.CurrentAnimation = "ReloadArms";
+            gunmodelAnimation2.CurrentAnimation = "ReloadGun";
+
+            gunmodelAnimation.Play();
+            gunmodelAnimation2.Play();
+        }
+
+        if (Input.IsActionJustPressed("fire") && !isReloading)
+        {
+            gunmodelAnimation.CurrentAnimation = "FireArms";
+            gunmodelAnimation2.CurrentAnimation = "FireGun";
+
+            gunmodelAnimation.Play();
+            gunmodelAnimation2.Play();
+
+
+        }
+
+        // DEBUGDEBUGBUDEUBG
+        if (!gunmodelAnimation.IsPlaying())
+        {
+            gunmodelAnimation.CurrentAnimation = "Basepose";
+            gunmodelAnimation2.CurrentAnimation = "Basepose";
+
+        }
+
 
         base._Process(delta);
     }
@@ -147,8 +198,6 @@ public partial class Player : CharacterBody3D
         // Adds gravity.
         if (!IsOnFloor())
             velocity.Y -= GRAVITY * (float)delta;
-
-        HandleMouseState();
 
         HandleJumping();
 
@@ -229,19 +278,5 @@ public partial class Player : CharacterBody3D
         if (IsOnFloor())
             velocity *= GROUNDFRICTION;
          
-    }
-
-    public void HandleMouseState()
-    {
-        // Toggles mouse capturing 
-        if (Input.IsActionJustPressed("ui_cancel"))
-        {
-            isFocused = !isFocused;
-
-            if (isFocused)
-                Input.MouseMode = Input.MouseModeEnum.Captured;
-            else
-                Input.MouseMode = Input.MouseModeEnum.Visible;
-        }
     }
 }

@@ -109,8 +109,6 @@ use_collision = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -0.125, 2.25)
 size = Vector3(12, 0.25, 5.5)
 
-[node name="WorldEnvironment" parent="." instance=ExtResource("2_4l5j8")]
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.506414, 0.401299, -0.76322, 0.776479, 0.172698, 0.606016, 0.375, -0.899519, -0.224144, 0, 1.25, 2.5)
 layers = 3
@@ -173,3 +171,5 @@ shadow_enabled = true
 [node name="Player" parent="." instance=ExtResource("1_buvr4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 3)
 slide_on_ceiling = false
+
+[node name="RamenEnvironment" parent="." instance=ExtResource("2_4l5j8")]
