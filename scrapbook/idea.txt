@@ -30,4 +30,7 @@ on one of the dossiers she could also write her phone number and a little doodle
 
 maybe bar owner called akane, red themed restaurant?
 
-筋肉ラーメン
+
+
+xyz
+0, .1, -.25

@@ -1,9 +1,9 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ufsoaaia4m3n"]
 
-[ext_resource type="Texture2D" uid="uid://dajs3l7ql6c1h" path="res://assets/models/arms/arms_hud_nails.png" id="1_i807w"]
+[ext_resource type="Texture2D" uid="uid://2hesw4q431ml" path="res://assets/models/arms/arms_hud_test2arm_nails.png" id="1_pamde"]
 
 [resource]
 resource_name = "Nails"
 cull_mode = 2
-albedo_texture = ExtResource("1_i807w")
+albedo_texture = ExtResource("1_pamde")
 roughness = 0.375636

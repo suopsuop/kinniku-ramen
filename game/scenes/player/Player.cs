@@ -12,9 +12,9 @@ public partial class Player : CharacterBody3D
     [Export]
     public Camera3D gunmodelCamera;
     [Export]
-    public AnimationPlayer gunmodelAnimation;
+    public AnimationPlayer GunAnimation;
     [Export]
-    public AnimationPlayer gunmodelAnimation2;
+    public AnimationPlayer ArmAnimation;
 
 
     [ExportGroup("Audio Sources")]
@@ -144,31 +144,39 @@ public partial class Player : CharacterBody3D
         if (Input.IsActionJustPressed("reload"))
         {
             //isReloading = true;
-            gunmodelAnimation.CurrentAnimation = "ReloadArms";
-            gunmodelAnimation2.CurrentAnimation = "ReloadGun";
+            GunAnimation.Stop();
+            ArmAnimation.Stop();
 
-            gunmodelAnimation.Play();
-            gunmodelAnimation2.Play();
+            GunAnimation.CurrentAnimation = ArmAnimation.CurrentAnimation = "Reload";
+
+            GunAnimation.Play();
+            ArmAnimation.Play();
         }
 
         if (Input.IsActionJustPressed("fire") && !isReloading)
         {
-            gunmodelAnimation.CurrentAnimation = "FireArms";
-            gunmodelAnimation2.CurrentAnimation = "FireGun";
+            GunAnimation.Stop();
+            ArmAnimation.Stop();
 
-            gunmodelAnimation.Play();
-            gunmodelAnimation2.Play();
+            GunAnimation.CurrentAnimation = ArmAnimation.CurrentAnimation = "Fire";
 
+            GunAnimation.Play();
+            ArmAnimation.Play();
 
+            RandomNumberGenerator rng = new RandomNumberGenerator();
+
+            gunshotSound.PitchScale = rng.RandfRange(.95f, 1.05f);
+
+            gunshotSound.Play();
         }
 
-        // DEBUGDEBUGBUDEUBG
-        if (!gunmodelAnimation.IsPlaying())
-        {
-            gunmodelAnimation.CurrentAnimation = "Basepose";
-            gunmodelAnimation2.CurrentAnimation = "Basepose";
+        //// DEBUGDEBUGBUDEUBG
+        //if (!GunAnimation.IsPlaying())
+        //{
+        //    GunAnimation.CurrentAnimation = ArmAnimation.CurrentAnimation = "Basepose";
 
-        }
+
+        //}
 
 
         base._Process(delta);

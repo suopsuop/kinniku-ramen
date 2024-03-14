@@ -1,10 +1,10 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://v3ye1sc7dto2"]
 
-[ext_resource type="Texture2D" uid="uid://1u07ym0770ii" path="res://assets/models/arms/arms_hud_arms.png" id="1_urcr4"]
+[ext_resource type="Texture2D" uid="uid://cn4yg7m2dkbpe" path="res://assets/models/arms/arms_hud_test2arm_arms.png" id="1_avoya"]
 
 [resource]
 resource_name = "Arms"
 specular_mode = 1
-albedo_texture = ExtResource("1_urcr4")
+albedo_texture = ExtResource("1_avoya")
 roughness = 0.65
 texture_filter = 0
