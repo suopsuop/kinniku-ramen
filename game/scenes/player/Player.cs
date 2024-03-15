@@ -141,7 +141,7 @@ public partial class Player : CharacterBody3D
                 Input.MouseMode = Input.MouseModeEnum.Visible;
         }
 
-        if (Input.IsActionJustPressed("reload"))
+        if (Input.IsActionJustPressed("reload") && !isReloading)
         {
             //isReloading = true;
             GunAnimation.Stop();
